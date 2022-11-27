@@ -1,6 +1,11 @@
 // alert('hello world')
 
 const form = document.querySelector('form');//anytime document is mentioned thats client side js
+
+const loadingElement = document.querySelector('.loading');
+
+loadingElement.style.display = 'none'; 
+
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     const formData = new FormData(form)
@@ -13,4 +18,6 @@ form.addEventListener('submit', (event) =>{
         content
     };
     console.log(mew,name)
+    form.style.display = 'none';
+    loadingElement.style.display = ''
 })

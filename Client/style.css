@@ -1,8 +1,13 @@
 .title{
     text-align: center;
 }
-.mew-form{
+.mew-form, .loading{
     width: 50%;
     margin: 0 auto;
     /* text-align: center; */
+}
+.loading{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
