@@ -4,9 +4,13 @@ const app = express();
 
 app.get('/', (req, res) =>{
     res.json({
-        message: 'Meower'
+        message: 'Meower🐹😎'
     });
 });
+
+app.post('./mews', (req, res) =>{
+    console.log(req.body);
+})
 
 app.listen(8000,() => {
     console.log('listening on http://localhost:8000');
