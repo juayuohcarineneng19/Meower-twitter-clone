@@ -1,6 +1,6 @@
 // alert('hello world')
 
-const form = document.querySelector('form');//anytime document is mentioned thats client side js
+const form = document.querySelector('form');// anytime document is mentioned thats client side js
 
 const loadingElement = document.querySelector('.loading');
 
