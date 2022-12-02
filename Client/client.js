@@ -3,6 +3,7 @@
 const form = document.querySelector('form');// anytime document is mentioned thats client side js
 
 const loadingElement = document.querySelector('.loading');
+const API_URL = "https://localhost:8000/mews";
 
 loadingElement.style.display = 'none'; 
 
@@ -17,7 +18,17 @@ form.addEventListener('submit', (event) =>{
         name,
         content
     };
-    console.log(mew,name)
+     
     form.style.display = 'none';
     loadingElement.style.display = ''
-})
+
+    fetch(API_URL, {
+        method: 'POST',
+        body: JSON.stringify(mew),
+        headers: {
+            'content-type': 'application/json'
+        }
+        
+
+    });
+});
