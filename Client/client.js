@@ -5,6 +5,7 @@ const form = document.querySelector('form');// anytime document is mentioned tha
 const loadingElement = document.querySelector('.loading');
 const API_URL = "http://localhost:8000/mews";
 
+
 loadingElement.style.display = 'none'; 
 
 form.addEventListener('submit', (event) =>{
