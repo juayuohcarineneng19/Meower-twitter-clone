@@ -3,7 +3,7 @@
 const form = document.querySelector('form');// anytime document is mentioned thats client side js
 
 const loadingElement = document.querySelector('.loading');
-const API_URL = "https://localhost:8000/mews";
+const API_URL = "http://localhost:8000/mews";
 
 loadingElement.style.display = 'none'; 
 
