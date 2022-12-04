@@ -1,8 +1,13 @@
 const express = require('express'); // bring in a library installed with express
 
 const cors = require('cors');
+const monk = monk('monk');
 
 const app = express();
+const db = monk('localhost/meower');
+const mews = db.get('mews');
+
+
 
 app.use(cors());
 app.use(express.json());
@@ -25,7 +30,11 @@ app.post('/mews', (req, res) =>{
             name: req.body.name.toString(),
             content:req.body.content.toString()
         };
-        console.log(mew)
+        mews
+        .insert(mew)
+        .then(created mew => {
+            res.json(createdMew);
+        });
     }else{
         res.status(422)
         res.json({
